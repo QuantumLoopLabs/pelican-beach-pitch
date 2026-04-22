@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Pelican Beach — Tiki Bar &amp; Café on the Gulf in Destin, FL</title>
+<meta name="description" content="Beachfront Tiki Bar and Pelican Beach Café at the Resorts of Pelican Beach — frozen cocktails, fresh Gulf fare, and sunset toes-in-the-sand service on Destin's Emerald Coast.">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap">
+<style>
+:root{
+  --ocean:#0B3B4A;
+  --ocean-deep:#072935;
+  --ink:#0C1F26;
+  --sand:#F7EED8;
+  --sand-soft:#EDE3C9;
+  --cream:#FBF6E7;
+  --gold:#F2B949;
+  --gold-deep:#D99420;
+  --coral:#E85D34;
+  --coral-deep:#C7431F;
+  --sea:#5EA8A0;
+  --hair:rgba(12,31,38,.14);
+  --hair-light:rgba(247,238,216,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--sand);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  font-weight:400;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.serif{font-family:'Fraunces',Georgia,serif;font-optical-sizing:auto;letter-spacing:-.015em}
+.script{font-family:'Caveat',cursive}
+.container{max-width:1280px;margin:0 auto;padding:0 32px}
+@media (max-width:720px){.container{padding:0 20px}}
+
+.eyebrow{
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  font-weight:600;color:var(--coral);
+  display:inline-flex;align-items:center;gap:14px;
+}
+.eyebrow::before{content:"";width:32px;height:2px;background:var(--coral);display:inline-block}
+.eyebrow.light{color:var(--gold)}
+.eyebrow.light::before{background:var(--gold)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:19px 30px;
+  background:var(--ocean);color:var(--sand);
+  font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;
+  border:0;cursor:pointer;border-radius:999px;
+  transition:background .2s ease,transform .15s ease;
+}
+.btn:hover{background:var(--coral);transform:translateY(-2px)}
+.btn.coral{background:var(--coral)}
+.btn.coral:hover{background:var(--coral-deep)}
+.btn.ghost{background:transparent;color:var(--ocean);border:1.5px solid var(--ocean)}
+.btn.ghost:hover{background:var(--ocean);color:var(--sand)}
+.btn svg{width:14px;height:14px}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,238,216,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hair);
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 32px;max-width:1320px;margin:0 auto;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{
+  width:46px;height:46px;background:var(--ocean);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  border-radius:12px;
+  font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:26px;font-weight:500;
+}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-name{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:500;letter-spacing:-.015em}
+.brand-sub{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ocean);margin-top:4px;font-weight:500;opacity:.72}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink)}
+.nav-links a:hover{color:var(--coral)}
+.nav-cta{display:flex;gap:14px;align-items:center}
+.nav-phone{
+  font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:500;
+  color:var(--ocean);display:flex;align-items:center;gap:10px;
+}
+.nav-phone .dot{width:8px;height:8px;background:var(--coral);border-radius:50%;display:inline-block;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@media (max-width:980px){.nav-links{display:none}.nav-phone{font-size:16px}}
+@media (max-width:520px){.nav-cta .btn{display:none}.brand-sub{display:none}}
+
+/* HERO */
+.hero{
+  position:relative;
+  padding:80px 0 40px;
+  background:
+    radial-gradient(60% 80% at 85% 40%, rgba(242,185,73,.25), transparent 70%),
+    radial-gradient(55% 70% at 10% 100%, rgba(232,93,52,.18), transparent 75%),
+    var(--sand);
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px,rgba(12,31,38,.08) 1px,transparent 0);
+  background-size:24px 24px;opacity:.5;
+}
+.hero-grid{
+  position:relative;
+  display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:end;
+}
+.hero h1{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:300;font-size:clamp(56px,10vw,172px);
+  line-height:.9;letter-spacing:-.03em;color:var(--ocean);
+}
+.hero h1 em{font-style:italic;color:var(--coral);font-weight:400}
+.hero h1 .sm{display:block;font-size:.26em;letter-spacing:.02em;font-style:italic;color:var(--ocean);margin-top:18px;font-weight:300;opacity:.8}
+.hero-meta{display:flex;flex-direction:column;gap:28px;padding-bottom:14px}
+.hero-lead{
+  font-size:17px;line-height:1.6;color:var(--ink);max-width:380px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stamp{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ocean);font-weight:500;opacity:.8;
+}
+.hero-stamp svg{width:16px;height:16px}
+
+.hero-scene{
+  position:relative;
+  margin-top:60px;
+  aspect-ratio:21/9;
+  border-radius:24px;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg, #F2B949 0%, #E85D34 38%, #C7431F 64%, #5EA8A0 78%, #0B3B4A 100%);
+  box-shadow:0 30px 60px -20px rgba(11,59,74,.4);
+}
+.hero-scene::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 72% 38%, rgba(255,245,210,.95), rgba(255,245,210,0) 18%),
+    radial-gradient(circle at 72% 38%, rgba(251,246,231,.35), transparent 36%);
+}
+.hero-scene::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:22%;
+  background:linear-gradient(180deg,transparent,rgba(11,59,74,.5)),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 3px,transparent 3px 14px);
+}
+.scene-palms{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 16% 72%, rgba(11,59,74,.95) 0 2%, transparent 3%),
+    radial-gradient(circle at 85% 65%, rgba(11,59,74,.95) 0 1.6%, transparent 2.6%);
+}
+.scene-caption{
+  position:absolute;left:32px;bottom:28px;z-index:3;
+  color:var(--sand);font-family:'Fraunces',Georgia,serif;font-style:italic;
+  font-size:22px;line-height:1.25;max-width:260px;
+  text-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+.scene-caption::before{
+  content:"";display:block;width:36px;height:2px;background:var(--gold);margin-bottom:14px;
+}
+.hero-pin{
+  position:absolute;right:28px;top:24px;z-index:3;
+  background:var(--sand);color:var(--ocean);
+  padding:14px 18px;border-radius:14px;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
+  display:flex;align-items:center;gap:10px;
+  box-shadow:0 8px 24px rgba(11,59,74,.3);
+}
+.hero-pin .dot{width:8px;height:8px;background:var(--coral);border-radius:50%}
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero-scene{margin-top:20px;aspect-ratio:16/10}}
+
+/* STRIP */
+.strip{
+  background:var(--ocean);color:var(--sand);
+  padding:22px 0;overflow:hidden;white-space:nowrap;
+}
+.strip-track{display:inline-flex;gap:56px;animation:scroll 48s linear infinite;padding-left:56px}
+.strip-item{
+  display:inline-flex;align-items:center;gap:18px;
+  font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:24px;font-weight:400;
+}
+.strip-item .ast{color:var(--gold);font-style:normal;font-weight:500}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTION BASE */
+section{padding:120px 0;position:relative}
+@media (max-width:720px){section{padding:80px 0}}
+.sec-head{display:grid;grid-template-columns:1fr 2fr;gap:60px;margin-bottom:64px;align-items:end}
+.sec-head h2{
+  font-family:'Fraunces',Georgia,serif;font-weight:300;
+  font-size:clamp(40px,5.5vw,76px);line-height:1;letter-spacing:-.025em;
+}
+.sec-head h2 em{font-style:italic;color:var(--coral);font-weight:400}
+.sec-head p{font-size:16px;color:var(--ink);line-height:1.6;max-width:440px;opacity:.85}
+@media (max-width:800px){.sec-head{grid-template-columns:1fr;gap:24px}}
+
+/* STATS */
+.stats{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:52px 0;background:var(--sand-soft)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.stat{display:flex;flex-direction:column;gap:8px;position:relative;padding-left:26px}
+.stat::before{content:"";position:absolute;left:0;top:10px;width:12px;height:12px;background:var(--coral);border-radius:50%}
+.stat-num{font-family:'Fraunces',Georgia,serif;font-size:46px;font-weight:400;line-height:1;letter-spacing:-.02em;color:var(--ocean)}
+.stat-num em{font-style:italic;color:var(--coral)}
+.stat-lbl{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ocean);font-weight:500;opacity:.8}
+@media (max-width:820px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 24px}}
+
+/* MENU */
+.menu{background:var(--cream)}
+.menu-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.menu-col h3{
+  font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:28px;
+  color:var(--ocean);margin-bottom:8px;display:flex;align-items:center;gap:12px;
+}
+.menu-col h3 em{font-style:italic;color:var(--coral);font-weight:400}
+.menu-col .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ocean);opacity:.65;margin-bottom:24px}
+.menu-item{
+  display:grid;grid-template-columns:1fr auto;gap:14px;
+  padding:16px 0;border-bottom:1px dashed var(--hair);
+}
+.menu-item:last-child{border-bottom:0}
+.menu-item .n{font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+.menu-item .d{font-size:13px;color:var(--ink);opacity:.72;margin-top:2px;line-height:1.45}
+.menu-item .p{
+  font-family:'Fraunces',Georgia,serif;font-size:18px;font-weight:500;color:var(--coral);
+  font-variant-numeric:tabular-nums;
+}
+.menu-card{
+  background:var(--ocean);color:var(--sand);
+  padding:36px 32px;border-radius:22px;position:sticky;top:100px;
+  box-shadow:0 24px 60px -24px rgba(11,59,74,.4);
+  overflow:hidden;
+}
+.menu-card::before{
+  content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;
+  background:radial-gradient(circle,rgba(242,185,73,.28),transparent 65%);
+}
+.menu-card h4{
+  font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:38px;
+  line-height:1.05;margin-bottom:14px;position:relative;
+}
+.menu-card h4 em{font-style:italic;color:var(--gold)}
+.menu-card p{font-size:14px;line-height:1.6;opacity:.85;margin-bottom:26px;position:relative}
+.menu-card .row{display:flex;gap:12px;flex-wrap:wrap;position:relative}
+.menu-card .chip{
+  display:inline-flex;padding:8px 14px;border:1px solid var(--hair-light);
+  border-radius:999px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+}
+@media (max-width:900px){.menu-grid{grid-template-columns:1fr}.menu-cols{grid-template-columns:1fr;gap:36px}.menu-card{position:relative;top:0}}
+
+/* GALLERY */
+.gallery{background:var(--sand)}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:140px;gap:14px;
+}
+.tile{
+  position:relative;border-radius:16px;overflow:hidden;
+  background:var(--ocean);color:var(--sand);
+  display:flex;align-items:flex-end;padding:22px;
+}
+.tile::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,41,53,.8));pointer-events:none}
+.tile .label{position:relative;font-family:'Fraunces',Georgia,serif;font-size:22px;font-style:italic;font-weight:400;line-height:1.1}
+.tile.t1{grid-column:span 7;grid-row:span 3;background:
+  linear-gradient(180deg,rgba(11,59,74,.1),rgba(11,59,74,.5)),
+  radial-gradient(80% 100% at 30% 40%, #F2B949, #E85D34 55%, #0B3B4A 100%)}
+.tile.t2{grid-column:span 5;grid-row:span 2;background:
+  linear-gradient(180deg,rgba(11,59,74,.1),rgba(11,59,74,.55)),
+  linear-gradient(135deg,#5EA8A0,#0B3B4A)}
+.tile.t3{grid-column:span 5;grid-row:span 1;background:
+  linear-gradient(180deg,rgba(11,59,74,.1),rgba(11,59,74,.55)),
+  linear-gradient(135deg,#E85D34,#C7431F)}
+.tile.t4{grid-column:span 4;grid-row:span 2;background:
+  linear-gradient(180deg,rgba(11,59,74,.1),rgba(11,59,74,.5)),
+  linear-gradient(160deg,#F7EED8 0%,#F2B949 70%);color:var(--ocean)}
+.tile.t5{grid-column:span 4;grid-row:span 2;background:
+  linear-gradient(180deg,rgba(11,59,74,.1),rgba(11,59,74,.6)),
+  linear-gradient(135deg,#0B3B4A,#072935)}
+.tile.t6{grid-column:span 4;grid-row:span 2;background:
+  linear-gradient(180deg,rgba(11,59,74,.1),rgba(11,59,74,.5)),
+  linear-gradient(135deg,#D99420,#E85D34)}
+.tile svg{position:absolute;right:18px;top:18px;width:28px;height:28px;opacity:.8}
+@media (max-width:820px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+.tile{grid-column:span 1;grid-row:span 1}.tile.t1{grid-column:span 2;grid-row:span 2}}
+
+/* EXPERIENCE */
+.exp{background:var(--ocean);color:var(--sand)}
+.exp .sec-head h2{color:var(--sand)}
+.exp .sec-head h2 em{color:var(--gold)}
+.exp .sec-head p{color:var(--sand);opacity:.8}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.exp-card{
+  padding:36px 32px;border-radius:20px;
+  border:1px solid var(--hair-light);
+  background:linear-gradient(180deg,rgba(247,238,216,.05),rgba(247,238,216,.01));
+  position:relative;overflow:hidden;
+  transition:transform .25s ease,border-color .25s ease;
+}
+.exp-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.exp-num{
+  font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:14px;
+  color:var(--gold);letter-spacing:.04em;margin-bottom:24px;
+}
+.exp-card h3{
+  font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:30px;
+  line-height:1.1;margin-bottom:14px;letter-spacing:-.015em;
+}
+.exp-card h3 em{font-style:italic;color:var(--gold)}
+.exp-card p{font-size:14.5px;line-height:1.65;opacity:.82}
+.exp-card .ic{
+  width:48px;height:48px;border-radius:12px;background:var(--gold);color:var(--ocean);
+  display:flex;align-items:center;justify-content:center;margin-bottom:26px;
+}
+.exp-card .ic svg{width:22px;height:22px}
+@media (max-width:900px){.exp-grid{grid-template-columns:1fr;gap:20px}}
+
+/* REVIEWS */
+.reviews{background:var(--cream)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev{
+  padding:34px 30px;border-radius:18px;background:var(--sand);
+  border:1px solid var(--hair);position:relative;
+}
+.rev::before{
+  content:"\201C";position:absolute;top:8px;left:18px;
+  font-family:'Fraunces',Georgia,serif;font-size:96px;line-height:1;
+  color:var(--coral);opacity:.25;
+}
+.rev-stars{color:var(--gold);font-size:18px;margin-bottom:16px;letter-spacing:2px;position:relative}
+.rev-text{font-family:'Fraunces',Georgia,serif;font-size:19px;line-height:1.5;color:var(--ink);font-weight:400;margin-bottom:22px;position:relative;letter-spacing:-.005em}
+.rev-author{display:flex;align-items:center;gap:12px;position:relative}
+.rev-avatar{width:36px;height:36px;border-radius:50%;background:var(--ocean);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-size:15px;font-weight:500;font-style:italic}
+.rev-name{font-size:13px;font-weight:600;color:var(--ink)}
+.rev-src{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ocean);opacity:.6;margin-top:2px}
+@media (max-width:900px){.rev-grid{grid-template-columns:1fr;gap:16px}}
+
+/* VISIT / FOOTER */
+.visit{background:var(--sand);position:relative;overflow:hidden}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.visit h2{
+  font-family:'Fraunces',Georgia,serif;font-weight:300;font-size:clamp(44px,6vw,88px);
+  line-height:.98;letter-spacing:-.025em;color:var(--ocean);margin-bottom:28px;
+}
+.visit h2 em{font-style:italic;color:var(--coral)}
+.visit .lead{font-size:17px;color:var(--ink);line-height:1.6;max-width:420px;margin-bottom:36px;opacity:.85}
+.visit-info{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-bottom:36px}
+.vi-card{padding:22px;border-radius:16px;background:var(--cream);border:1px solid var(--hair)}
+.vi-card .lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--coral);margin-bottom:10px}
+.vi-card .val{font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:500;color:var(--ocean);letter-spacing:-.01em;line-height:1.25}
+.vi-card .sub{font-size:13px;color:var(--ink);opacity:.7;margin-top:6px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--hair);font-size:14px}
+.hours li:last-child{border-bottom:0}
+.hours .d{color:var(--ocean);font-weight:500}
+.hours .t{font-family:'Fraunces',Georgia,serif;color:var(--ink);font-variant-numeric:tabular-nums}
+.map-card{
+  position:relative;aspect-ratio:1/1.1;border-radius:24px;overflow:hidden;
+  background:
+    linear-gradient(135deg,#5EA8A0 0%,#0B3B4A 50%,#072935 100%);
+  box-shadow:0 24px 60px -24px rgba(11,59,74,.45);
+}
+.map-card::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 60% 30%,rgba(242,185,73,.2),transparent 50%),
+    repeating-linear-gradient(0deg,rgba(247,238,216,.05) 0 1px,transparent 1px 48px),
+    repeating-linear-gradient(90deg,rgba(247,238,216,.05) 0 1px,transparent 1px 48px);
+}
+.map-card::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:45%;
+  background:linear-gradient(180deg,transparent,rgba(242,185,73,.3) 35%,rgba(247,238,216,.75));
+}
+.map-pin{
+  position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.map-pin .p{
+  width:50px;height:50px;border-radius:50% 50% 50% 0;
+  background:var(--coral);transform:rotate(-45deg);
+  box-shadow:0 6px 20px rgba(199,67,31,.5);
+  display:flex;align-items:center;justify-content:center;
+}
+.map-pin .p::after{content:"";width:18px;height:18px;border-radius:50%;background:var(--sand)}
+.map-addr{
+  position:absolute;left:24px;right:24px;bottom:24px;z-index:3;
+  background:var(--sand);padding:20px;border-radius:14px;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.map-addr .adr{font-family:'Fraunces',Georgia,serif;font-size:17px;color:var(--ocean);font-weight:500;line-height:1.25}
+.map-addr .adr span{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);font-weight:600;margin-bottom:6px;font-family:'Inter',sans-serif}
+.map-addr a{
+  background:var(--ocean);color:var(--sand);
+  padding:12px 18px;border-radius:999px;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+  white-space:nowrap;
+}
+.map-addr a:hover{background:var(--coral)}
+@media (max-width:900px){.visit-grid{grid-template-columns:1fr;gap:40px}.visit-info{grid-template-columns:1fr}}
+@media (max-width:520px){.map-addr{flex-direction:column;align-items:stretch}.map-addr a{text-align:center}}
+
+/* FOOTER */
+footer{background:var(--ocean-deep);color:var(--sand);padding:80px 0 40px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+.foot-brand .brand-name{color:var(--sand);font-size:26px}
+.foot-brand .brand-sub{color:var(--gold);opacity:1;margin-top:6px}
+.foot-brand p{margin-top:20px;font-size:14.5px;opacity:.72;line-height:1.6;max-width:320px}
+.foot h5{font-family:'Fraunces',Georgia,serif;font-size:14px;font-weight:500;font-style:italic;color:var(--gold);margin-bottom:18px;letter-spacing:.02em}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot li{font-size:14px;opacity:.78}
+.foot li:hover{opacity:1;color:var(--gold)}
+.foot-bottom{padding-top:32px;border-top:1px solid var(--hair-light);display:flex;justify-content:space-between;align-items:center;font-size:12px;opacity:.6;letter-spacing:.05em}
+@media (max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:36px}}
+@media (max-width:520px){.foot-grid{grid-template-columns:1fr}.foot-bottom{flex-direction:column;gap:12px;text-align:center}}
+
+.script-accent{font-family:'Caveat',cursive;color:var(--coral);font-size:1.6em;line-height:.8;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <div class="brand-mark">P</div>
+      <div class="brand-text">
+        <div class="brand-name">Pelican Beach</div>
+        <div class="brand-sub">Tiki Bar &amp; Café · Destin</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#experience">The Vibe</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+18506541425" class="nav-phone"><span class="dot"></span>(850) 654-1425</a>
+      <a href="#visit" class="btn coral">Reserve a Table</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Est. on the Emerald Coast</span>
+        <h1 style="margin-top:28px">Toes in the<br><em>sand,</em> drink<br>in <em>hand.</em>
+          <span class="sm">Beachfront Tiki Bar &amp; Café at the Resorts of Pelican Beach — Destin, Florida.</span>
+        </h1>
+      </div>
+      <div class="hero-meta">
+        <p class="hero-lead">Frozen rum painkillers, Gulf-caught fish tacos, Hattie's hot breakfast before the sun hits the water. Open-air seating, no shoes required.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn">See the Menu</a>
+          <a href="#visit" class="btn ghost">Get Directions</a>
+        </div>
+        <div class="hero-stamp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+          4.2★ · 2,294 Google reviews
+        </div>
+      </div>
+    </div>
+    <div class="hero-scene">
+      <div class="scene-palms"></div>
+      <div class="hero-pin"><span class="dot"></span>Open Today · 7am – 9pm</div>
+      <div class="scene-caption">Sundowners on the Gulf — the only to-do on your list.</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-track">
+    <span class="strip-item">Frozen Painkillers <span class="ast">✺</span></span>
+    <span class="strip-item">Gulf Shrimp Po' Boys <span class="ast">✺</span></span>
+    <span class="strip-item">Hattie's Hot Breakfast <span class="ast">✺</span></span>
+    <span class="strip-item">Sunset Happy Hour <span class="ast">✺</span></span>
+    <span class="strip-item">Beachfront Seating <span class="ast">✺</span></span>
+    <span class="strip-item">Key Lime Pie <span class="ast">✺</span></span>
+    <span class="strip-item">Frozen Painkillers <span class="ast">✺</span></span>
+    <span class="strip-item">Gulf Shrimp Po' Boys <span class="ast">✺</span></span>
+    <span class="strip-item">Hattie's Hot Breakfast <span class="ast">✺</span></span>
+    <span class="strip-item">Sunset Happy Hour <span class="ast">✺</span></span>
+    <span class="strip-item">Beachfront Seating <span class="ast">✺</span></span>
+    <span class="strip-item">Key Lime Pie <span class="ast">✺</span></span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">4.2<em>★</em></div>
+        <div class="stat-lbl">Google Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2,294</div>
+        <div class="stat-lbl">Happy Guests</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">7<em>a</em>–9<em>p</em></div>
+        <div class="stat-lbl">Open Daily</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0<em>ft</em></div>
+        <div class="stat-lbl">From the Sand</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="menu" class="menu">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">The Menu</span>
+      <h2>Sun-soaked sips &amp; Gulf-to-table <em>bites.</em></h2>
+    </div>
+    <div class="menu-grid">
+      <div>
+        <div class="menu-cols">
+          <div class="menu-col">
+            <h3>From the <em>Tiki Bar</em></h3>
+            <div class="tag">Until 3pm daily</div>
+            <div class="menu-item"><div><div class="n">The Painkiller</div><div class="d">Pusser's rum, pineapple, orange, cream of coconut, fresh nutmeg.</div></div><div class="p">14</div></div>
+            <div class="menu-item"><div><div class="n">Pelican Paloma</div><div class="d">Reposado tequila, fresh grapefruit, lime, kosher salt rim.</div></div><div class="p">13</div></div>
+            <div class="menu-item"><div><div class="n">Frozen Bushwacker</div><div class="d">Five-rum blend, Kahlúa, crème de cacao, toasted coconut.</div></div><div class="p">14</div></div>
+            <div class="menu-item"><div><div class="n">Gulf Coast Gimlet</div><div class="d">Hendrick's, cucumber, Key lime cordial, basil leaf.</div></div><div class="p">13</div></div>
+            <div class="menu-item"><div><div class="n">Local Draft</div><div class="d">Rotating taps — Grayton, Props, 3rd Planet.</div></div><div class="p">7</div></div>
+            <div class="menu-item"><div><div class="n">Frozen Margarita</div><div class="d">El Jimador blanco, lime, triple sec, swirl with strawberry +2.</div></div><div class="p">12</div></div>
+          </div>
+          <div class="menu-col">
+            <h3>Café <em>Kitchen</em></h3>
+            <div class="tag">Breakfast · Lunch · Snacks</div>
+            <div class="menu-item"><div><div class="n">Hattie's Hot Breakfast</div><div class="d">Made-to-order omelet, biscuit, bacon, Community Coffee.</div></div><div class="p">16</div></div>
+            <div class="menu-item"><div><div class="n">Gulf Shrimp Po' Boy</div><div class="d">Cornmeal-crusted shrimp, remoulade, shredded iceberg, toasted bun.</div></div><div class="p">18</div></div>
+            <div class="menu-item"><div><div class="n">Blackened Grouper Tacos</div><div class="d">Three corn tortillas, mango slaw, jalapeño crema, lime.</div></div><div class="p">19</div></div>
+            <div class="menu-item"><div><div class="n">Beach Cobb</div><div class="d">Romaine, grilled chicken, avocado, bacon, bleu, hard egg, buttermilk ranch.</div></div><div class="p">15</div></div>
+            <div class="menu-item"><div><div class="n">Key Lime Pie</div><div class="d">Graham crust, real Key limes, torched meringue, mint.</div></div><div class="p">9</div></div>
+            <div class="menu-item"><div><div class="n">Dippin' Dots®</div><div class="d">Eight flavors, because it's vacation.</div></div><div class="p">6</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <h4>Happy <em>Hour</em><br>daily 4–6pm</h4>
+        <p>Half-off draft beer, $7 house cocktails, $1 raw oysters on the half shell. Toes-in-sand seating fills up fast — grab a stool at the Tiki Bar or we'll run it out to you on the deck.</p>
+        <div class="row">
+          <span class="chip">$7 Cocktails</span>
+          <span class="chip">½ Off Drafts</span>
+          <span class="chip">$1 Oysters</span>
+          <span class="chip">Live Music Fri</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="exp">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow light">The Vibe</span>
+      <h2>A slower clock, a warmer <em>breeze.</em></h2>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c5 0 9 3 9 7s-4 7-9 7-9-3-9-7 4-7 9-7zm0 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div>
+        <div class="exp-num">no. 01</div>
+        <h3>Open-air <em>beachfront</em></h3>
+        <p>Cabanas, umbrellas, Adirondacks in the sand. Order from your chair — we'll find you. Pelicans optional, sunsets guaranteed.</p>
+      </div>
+      <div class="exp-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h14v7a7 7 0 01-14 0V3zM8 21h8M12 17v4"/></svg></div>
+        <div class="exp-num">no. 02</div>
+        <h3>Mixed for <em>vacation mode</em></h3>
+        <p>Painkillers in frosted hurricane glasses. Fresh-squeezed citrus. The kind of cocktails that feel like a standing ovation for your day off.</p>
+      </div>
+      <div class="exp-card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+        <div class="exp-num">no. 03</div>
+        <h3>Dawn to <em>dusk service</em></h3>
+        <p>Muffins and Community Coffee at sunrise. Grouper tacos at noon. Rum punch at 5. Key lime pie whenever, we're not your mother.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Postcards</span>
+      <h2>A few frames from the <em>beach bar.</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="tile t1"><span class="label">Sunset from the deck</span></div>
+      <div class="tile t2"><span class="label">The Tiki Bar</span></div>
+      <div class="tile t3"><span class="label">Painkiller #1</span></div>
+      <div class="tile t4"><span class="label">Hattie's breakfast plate</span></div>
+      <div class="tile t5"><span class="label">Gulf at blue hour</span></div>
+      <div class="tile t6"><span class="label">Friday night sets</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Sand-in-the-inbox reviews</span>
+      <h2>What our guests keep <em>coming back for.</em></h2>
+    </div>
+    <div class="rev-grid">
+      <div class="rev">
+        <div class="rev-stars">★★★★★</div>
+        <div class="rev-text">"The tiki bar is everything you want it to be — salty air, frozen painkillers, the sun setting over the Gulf. Our new tradition every spring break."</div>
+        <div class="rev-author"><div class="rev-avatar">J</div><div><div class="rev-name">Jenna R.</div><div class="rev-src">Google · March 2026</div></div></div>
+      </div>
+      <div class="rev">
+        <div class="rev-stars">★★★★★</div>
+        <div class="rev-text">"Hattie's hot breakfast is worth waking up for. Got the omelet, biscuit, extra bacon and a cup of Community — coffee with a view of pelicans and boats."</div>
+        <div class="rev-author"><div class="rev-avatar">M</div><div><div class="rev-name">Marcus L.</div><div class="rev-src">Google · Feb 2026</div></div></div>
+      </div>
+      <div class="rev">
+        <div class="rev-stars">★★★★★</div>
+        <div class="rev-text">"Grouper tacos + a frozen Bushwacker at 3pm, Friday live music, toes in the sand. Staff treats you like family by the second drink."</div>
+        <div class="rev-author"><div class="rev-avatar">S</div><div><div class="rev-name">Sasha T.</div><div class="rev-src">Google · Jan 2026</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="container">
+    <div class="visit-grid">
+      <div>
+        <span class="eyebrow">Come find us</span>
+        <h2 style="margin-top:20px">Right on <em>US-98,</em><br>right on the <em>Gulf.</em></h2>
+        <p class="lead">On the ground level of the Resorts of Pelican Beach — blue umbrellas, pelicans on the pilings, the smell of coconut sunscreen and grilled grouper. You can't miss it.</p>
+        <div class="visit-info">
+          <div class="vi-card">
+            <div class="lbl">Call</div>
+            <div class="val"><a href="tel:+18506541425">(850) 654-1425</a></div>
+            <div class="sub">Reservations not required — but a good idea on Fridays.</div>
+          </div>
+          <div class="vi-card">
+            <div class="lbl">Address</div>
+            <div class="val">1002 US-98<br>Destin, FL 32541</div>
+            <div class="sub">Free valet for dining guests.</div>
+          </div>
+          <div class="vi-card" style="grid-column:span 2">
+            <div class="lbl">Hours</div>
+            <ul class="hours">
+              <li><span class="d">Monday – Thursday</span><span class="t">7:00 am – 9:00 pm</span></li>
+              <li><span class="d">Friday</span><span class="t">7:00 am – 11:00 pm</span></li>
+              <li><span class="d">Saturday</span><span class="t">7:00 am – 11:00 pm</span></li>
+              <li><span class="d">Sunday</span><span class="t">7:00 am – 9:00 pm</span></li>
+            </ul>
+          </div>
+        </div>
+        <a href="tel:+18506541425" class="btn coral">Call to Reserve</a>
+      </div>
+      <div class="map-card">
+        <div class="map-pin"><div class="p"></div></div>
+        <div class="map-addr">
+          <div class="adr"><span>Pelican Beach</span>1002 US-98<br>Destin, FL 32541</div>
+          <a href="https://maps.google.com/?q=1002+US-98+Destin+FL+32541" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand" style="margin-bottom:4px">
+          <div class="brand-mark" style="background:var(--gold);color:var(--ocean-deep)">P</div>
+          <div class="brand-text">
+            <div class="brand-name">Pelican Beach</div>
+            <div class="brand-sub">Tiki Bar &amp; Café</div>
+          </div>
+        </div>
+        <p>Beachfront bar and café at the Resorts of Pelican Beach in Destin, Florida. Frozen drinks, Gulf fare, and sunsets on the 30A corridor since the pelicans found a good spot to land.</p>
+      </div>
+      <div class="foot">
+        <h5>Visit</h5>
+        <ul>
+          <li>1002 US-98</li>
+          <li>Destin, FL 32541</li>
+          <li><a href="tel:+18506541425">(850) 654-1425</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h5>Menu</h5>
+        <ul>
+          <li><a href="#menu">Tiki Bar</a></li>
+          <li><a href="#menu">Café Kitchen</a></li>
+          <li><a href="#menu">Happy Hour</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h5>Hours</h5>
+        <ul>
+          <li>Mon–Thu · 7a – 9p</li>
+          <li>Fri–Sat · 7a – 11p</li>
+          <li>Sunday · 7a – 9p</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Pelican Beach Café &amp; Tiki Bar · All rights reserved.</div>
+      <div>Destin · 30A · Emerald Coast</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
